@@ -10,7 +10,6 @@ module.exports = {
       }
     }),
     require("rtlcss"),
-    require("postcss-browser-reporter"),
-    require("postcss-reporter")
+    require("postcss-browser-reporter")
   ]
 };
