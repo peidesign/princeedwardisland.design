@@ -10,6 +10,7 @@ module.exports = {
       }
     }),
     require("rtlcss"),
+    require("laggard"),
     require("postcss-browser-reporter")
   ]
 };
