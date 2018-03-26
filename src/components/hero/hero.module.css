@@ -1,5 +1,7 @@
-@media screen and (min-width: 768px) {
-  .hero {
+.hero {
+  width: calc(100vw - 16px);
+
+  @media screen and (min-width: 768px) {
     height: calc(100vh - 8px);
   }
 }

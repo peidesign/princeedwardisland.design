@@ -8,7 +8,7 @@ export default ({ siteMetadata, headline, textline, cta, className }) => {
     <div
       className={`${className} ${
         styles.hero
-      } border-b-8 border-purple w-screen pb-4`}
+      } border-b-8 border-purple pb-4`}
     >
       <div className="flex flex-col h-full justify-between m-auto p-4 max-w-2xl">
         <Header siteMetadata={siteMetadata} />
