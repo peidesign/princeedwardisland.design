@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../../link";
-import styles from "../button.module.css";
+import styles from "./shadow.module.css";
 
 export default ({ children, href, to, external, color, className }) => (
   <Link href={href} to={to} external={external}>
