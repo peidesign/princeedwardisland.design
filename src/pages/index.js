@@ -99,6 +99,7 @@ export const query = graphql`
         title
         description
         siteURL
+        copyright
         menu
         social {
           image
