@@ -30,9 +30,7 @@ export default ({ data }) => {
       >
         RSVP today!
       </Button>
-      <p className="text-sm">
-        <AddToCalendar event={upcomingEvent} />
-      </p>
+      <AddToCalendar event={upcomingEvent} />
     </div>
   );
 
