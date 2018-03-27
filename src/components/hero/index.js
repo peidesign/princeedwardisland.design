@@ -3,7 +3,6 @@ import Header from "../header";
 import styles from "./hero.module.css";
 
 export default ({ siteMetadata, headline, textline, cta, className }) => {
-  console.log(siteMetadata);
   return (
     <div
       className={`${className} ${
