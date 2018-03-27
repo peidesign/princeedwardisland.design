@@ -1,4 +1,5 @@
 import React from "react";
+import AddToCalendar from "../components/addToCalendar"
 import Button from "../components/button";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
@@ -18,12 +19,7 @@ export default ({ data }) => {
         Sign up for updates
       </Button>
       <p className="text-sm">
-        <Link
-          href="http://www.google.com/calendar/event?location=Atlantic+Technology+Centre+-+90+University+Avenue+-+Charlottetown%2C+PE%2C+CA&action=TEMPLATE&sprop=name%3AP.E.I+Designers&sprop=website%3Ahttps%3A%2F%2Fwww.meetup.com%2Fpei-designers%2Fevents%2F249067407&details=For+full+details%2C+including+the+address%2C+and+to+RSVP+see%3A+https%3A%2F%2Fwww.meetup.com%2Fpei-designers%2Fevents%2F249067407%0A%0AFor+the+first+official+meetup+on+human-centered+design%2C+we+have+a+keynote+speaker+covering+the+basic...&text=Introduction+to+Human-centered+Design&dates=20180424T220000Z%2F20180425T000000Z"
-          external={true}
-        >
-          or add it to your calendar
-        </Link>
+        <AddToCalendar />
       </p>
     </div>
   );

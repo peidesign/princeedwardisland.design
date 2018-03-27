@@ -1,0 +1,21 @@
+.dropdown {
+  box-shadow: -0.75rem 0.75rem 0;
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.66;
+
+  & a:link,
+  & a:visited {
+    color: rgb(143, 130, 216);
+  }
+
+  & a:hover,
+  & a:active,
+  & a:focus {
+    opacity: 0.75;
+  }
+}
