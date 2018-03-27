@@ -4,7 +4,6 @@ import Logo from "./pei-design-logo.svg";
 import Menu from "../menu";
 
 export default ({ siteMetadata, className }) => {
-  console.log(siteMetadata);
   return (
     <nav role="navigation" className={`${className} self-start mt-4 mb-4`}>
       <Link to="/">
