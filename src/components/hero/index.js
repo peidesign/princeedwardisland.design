@@ -23,7 +23,7 @@ export default ({ siteMetadata, headline, textline, cta, className }) => {
             </div>
           </div>
         </div>
-        <div className="h-48" id="hero-spacer"/>
+        <div className="md:h-48" id="hero-spacer"/>
       </div>
     </div>
   );

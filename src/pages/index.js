@@ -50,7 +50,7 @@ export default ({ data }) => {
       />
       <div className="bg-purple pt-16 pr-4 pb-16 pl-4 relative text-white w-100">
         <div className="sm:flex sm:flex-row m-auto max-w-2xl">
-          <div className="sm:w-1/2 flex flex-col">
+          <div className="flex flex-col sm:pl-2 sm:w-1/2">
             <h2 className="text-white">💬 Join the conversation on Slack</h2>
             <p className="mt-4 opacity-75">
               Discuss design, find jobs, and meet new people.
@@ -67,7 +67,7 @@ export default ({ data }) => {
               </Button>
             </div>
           </div>
-          <div className="sm:w-1/2 flex flex-col">
+          <div className="flex flex-col sm:pr-2 sm:w-1/2">
             <h2 className="text-white">💌 Get the latest in our newsletter</h2>
             <p className="mt-4 opacity-75">
               Subscribe to our monthly newsletter for local and worldwide news
