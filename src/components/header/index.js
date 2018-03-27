@@ -3,13 +3,13 @@ import Link from "../link";
 import Logo from "./pei-design-logo.svg";
 import Menu from "../menu";
 
-export default ({ siteMetadata }) => {
+export default ({ siteMetadata, className }) => {
   console.log(siteMetadata)
   return (
-    <nav role="navigation" className="self-start mt-4 mb-4">
+    <nav role="navigation" className={`${className} self-start mt-4 mb-4`}>
       <Link to="/">
         <h1>
-          <Logo className="w-32 h-32" />
+          <Logo className="w-48 h-48" />
         </h1>
       </Link>
       <Menu siteMetadata={siteMetadata} />
