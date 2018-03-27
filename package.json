@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
-    "laggard": "^2.0.1",
     "gatsby": "^1.9.238",
     "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.39",
@@ -17,6 +16,8 @@
     "gatsby-plugin-react-svg": "^1.1.1",
     "gatsby-plugin-typography": "^1.7.18",
     "gatsby-source-airtable": "^0.0.6",
+    "laggard": "^2.0.1",
+    "moment": "^2.21.0",
     "postcss-loader": "^2.1.3",
     "purgecss": "^0.21.0",
     "purgecss-webpack-plugin": "^0.22.0",
