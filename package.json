@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
+    "laggard": "^2.0.1",
     "gatsby": "^1.9.238",
     "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.39",

@@ -10,9 +10,9 @@ export default ({ siteMetadata, headline, textline, cta, className }) => {
         styles.hero
       } border-b-8 border-purple pb-4`}
     >
-      <div className="flex flex-col h-full justify-between m-auto p-4 max-w-2xl">
+      <div className="flex flex-col h-full justify-between m-auto md:-mt-32 p-4 max-w-2xl">
         <Header siteMetadata={siteMetadata} />
-        <div className="self-center">
+        <div className="self-center w-full">
           <h1 className="mb-8 md:mb-16 text-4xl md:text-6xl">{headline}</h1>
           <div className="md:flex md:flex-row md:flex-shrink pl-4">
             <div className="md:w-1/2">
