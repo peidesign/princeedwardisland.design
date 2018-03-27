@@ -9,7 +9,7 @@ export default ({ siteMetadata, className }) => {
     <nav role="navigation" className={`${className} self-start mt-4 mb-4`}>
       <Link to="/">
         <h1>
-          <Logo className="w-48 h-48" />
+          <Logo className="w-48" />
         </h1>
       </Link>
       <Menu siteMetadata={siteMetadata} />
