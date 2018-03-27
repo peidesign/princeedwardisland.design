@@ -7,7 +7,7 @@ export default ({ siteMetadata, headline, textline, cta, className }) => {
     <div
       className={`${className} ${styles.hero}`}>
       <div className="flex flex-col h-full justify-around m-auto p-4 max-w-2xl">
-        <Header siteMetadata={siteMetadata} />
+        <Header className="pt-8" siteMetadata={siteMetadata} />
         <div className="self-center w-full">
           <h1 className="mb-8 md:mb-16 text-4xl md:text-6xl">{headline}</h1>
           <div className="md:flex md:flex-row md:flex-shrink pl-4">
