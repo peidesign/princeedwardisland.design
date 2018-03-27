@@ -5,10 +5,7 @@ import styles from "./hero.module.css";
 export default ({ siteMetadata, headline, textline, cta, className }) => {
   return (
     <div
-      className={`${className} ${
-        styles.hero
-      } border-b-8 border-purple pb-4`}
-    >
+      className={`${className} ${styles.hero}`}>
       <div className="flex flex-col h-full justify-between m-auto p-4 max-w-2xl">
         <Header siteMetadata={siteMetadata} />
         <div className="self-center w-full">
