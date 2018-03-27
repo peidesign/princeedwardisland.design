@@ -5,7 +5,13 @@ module.exports = {
       "The #1 community for all things design-related on Prince Edward Island",
     siteURL: "https://princedwardisland.design",
     copyright: "Copyright © 2018, P.E.I Designers.",
-    menu: [""]
+    menu: [""],
+    social: {
+      image: "/og-image.png",
+      twitter: "",
+      facebook: "",
+      meetup: ""
+    }
   },
   plugins: [
     {

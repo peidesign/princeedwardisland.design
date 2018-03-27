@@ -5,9 +5,11 @@ import Button from "../components/button";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
 import Link from "../components/link";
+import SEO from "../components/SEO"
 import Shapes from "../components/shapes";
 
 export default ({ data }) => {
+  const siteMetadata = data.site.siteMetadata
   const upcomingEvent = {
     title: "Introduction to Human-centered Design",
     description:
@@ -36,10 +38,11 @@ export default ({ data }) => {
 
   return (
     <div>
+      <SEO siteMetadata={siteMetadata} />
       <Shapes className="max-w-2xl" />
       <Hero
         className="relative"
-        siteMetadata={data.siteMetadata}
+        siteMetadata={siteMetadata}
         headline="Where designers of all kinds collide."
         textline="PEI Design is the #1 location for learning, growing, and
               networking for designers."
@@ -84,19 +87,24 @@ export default ({ data }) => {
           </div>
         </div>
       </div>
-      <Footer siteMetadata={data.siteMetadata} />
+      <Footer siteMetadata={siteMetadata} />
     </div>
   );
 };
 
 export const query = graphql`
-  query metaData {
+  query indexQuery {
     site {
       siteMetadata {
         title
         description
         siteURL
         menu
+        social {
+          image
+          twitter
+          facebook
+        }
       }
     }
   }
