@@ -25,7 +25,7 @@ export default ({ data }) => {
     <div>
       <p className="text-2xl">Our next meetup is {startDate}</p>
       <Button
-        href="https://www.meetup.com/pei-designers/"
+        href="https://www.meetup.com/peidesign/"
         external={true}
         style="shadow"
         className="mt-4 mb-4"
