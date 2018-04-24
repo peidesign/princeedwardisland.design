@@ -44,7 +44,7 @@ export default ({ data }) => {
         className="relative"
         siteMetadata={siteMetadata}
         headline="Your #1 source for design on P.E.I"
-        textline="PEI Design is the #1 location for learning, teaching, and
+        textline="P.E.I Design is the #1 location for learning, teaching, and
               networking for design thinkers."
         cta={heroCta}
       />
