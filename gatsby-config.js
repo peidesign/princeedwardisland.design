@@ -4,7 +4,7 @@ module.exports = {
     description:
       "The #1 community for all things design-related on Prince Edward Island",
     siteURL: "http://princeedwardisland.design",
-    copyright: "Copyright © 2018, P.E.I Designers.",
+    copyright: "Copyright © 2018, P.E.I Design.",
     menu: [""],
     social: {
       image: "/og-image.png",
