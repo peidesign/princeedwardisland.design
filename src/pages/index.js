@@ -43,9 +43,9 @@ export default ({ data }) => {
       <Hero
         className="relative"
         siteMetadata={siteMetadata}
-        headline="Where designers of all kinds collide."
-        textline="PEI Design is the #1 location for learning, growing, and
-              networking for designers."
+        headline="Your #1 source for design on P.E.I"
+        textline="PEI Design is the #1 location for learning, teaching, and
+              networking for design thinkers."
         cta={heroCta}
       />
       <div className="bg-purple pt-16 pr-4 pb-16 pl-4 relative text-white w-100">
