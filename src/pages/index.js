@@ -11,12 +11,13 @@ import Shapes from "../components/shapes";
 export default ({ data }) => {
   const siteMetadata = data.site.siteMetadata
   const upcomingEvent = {
-    title: "Introduction to Human-centered Design",
+    title: "P.E.I Dribbble Meetup",
     description:
-      "For the first official meetup on human-centered design, we have a keynote speaker covering the basics of human-centered design, and a short workshop on executing human-centered design principles for your own projects!",
-    location: "Atlantic Technology Centre, 90 University Avenue, Charlottetown",
-    startTime: "2018-04-24T20:19:00-04:00",
-    endTime: "2018-04-24T21:30:00-04:00"
+      "The first official P.E.I Designers Dribbble Meetup. Come out and socialize with designers, developers, and individuals in the community interested in creating a more inclusive and human-centered design community. We'll provide food, beverages, and great swag. You just provide great conversation! Meetup brought to you by Dribbble.",
+    location: "To be announced",
+    startTime: "2018-05-29T20:19:00-04:00",
+    endTime: "2018-05-29T21:30:00-04:00",
+    url: "https://www.meetup.com/peidesign/events/249622327/"
   };
   
   const startDate = moment(upcomingEvent.startTime).format("MMMM DD, YYYY")
@@ -25,12 +26,12 @@ export default ({ data }) => {
     <div>
       <p className="text-2xl">Our next meetup is {startDate}</p>
       <Button
-        href="https://www.meetup.com/peidesign/"
+        href={upcomingEvent.url}
         external={true}
         style="shadow"
         className="mt-4 mb-4"
       >
-        RSVP today!
+        Learn more
       </Button>
       <AddToCalendar event={upcomingEvent} />
     </div>
