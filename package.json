@@ -14,6 +14,7 @@
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-react-svg": "^1.1.1",
+    "gatsby-plugin-sitemap": "^1.2.23",
     "gatsby-plugin-typography": "^1.7.18",
     "gatsby-source-airtable": "^0.0.6",
     "laggard": "^2.0.1",

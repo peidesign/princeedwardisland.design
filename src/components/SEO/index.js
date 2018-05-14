@@ -51,15 +51,3 @@ export default ({siteMetadata, title, description, image, url }) => {
     </Helmet>
   );
 }
-
-export const query = graphql`
-  fragment siteMetadata on Site {
-    siteMetadata {
-      title
-      description
-      siteURL
-      copyright
-      menu
-    }
-  }
-`

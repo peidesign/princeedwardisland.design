@@ -98,7 +98,7 @@ export const query = graphql`
       siteMetadata {
         title
         description
-        siteURL
+        siteUrl
         copyright
         menu
         social {
