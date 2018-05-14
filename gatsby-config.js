@@ -3,7 +3,7 @@ module.exports = {
     title: "P.E.I Design",
     description:
       "The #1 community for all things design-related on Prince Edward Island",
-    siteUrl: "http://princeedwardisland.design",
+    siteUrl: "https://princeedwardisland.design",
     copyright: "Copyright © 2018, P.E.I Design.",
     menu: [""],
     social: {
