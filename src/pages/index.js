@@ -15,9 +15,9 @@ export default ({ data }) => {
     description:
       "The first official P.E.I Designers Dribbble Meetup. Come out and socialize with designers, developers, and individuals in the community interested in creating a more inclusive and human-centered design community. We'll provide food, beverages, and great swag. You just provide great conversation! Meetup brought to you by Dribbble.",
     location: "To be announced",
-    startTime: "2018-05-29T20:19:00-04:00",
-    endTime: "2018-05-29T21:30:00-04:00",
-    url: "https://www.meetup.com/peidesign/events/249622327/"
+    startTime: "2018-06-26T20:19:00-04:00",
+    endTime: "2018-06-26T21:00:00-04:00",
+    url: "https://www.meetup.com/peidesign/events/"
   };
   
   const startDate = moment(upcomingEvent.startTime).format("MMMM DD, YYYY")
