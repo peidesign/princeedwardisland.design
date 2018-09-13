@@ -11,7 +11,7 @@ import Shapes from "../components/shapes";
 export default ({ data }) => {
   const siteMetadata = data.site.siteMetadata
   const upcomingEvent = {
-    title: "P.E.I Dribbble Meetup",
+    title: "How Websites Learn - P.E.I Design",
     description:
       "",
     location: "Atlantic Technology Centre, 176 Great George St, 4th floor, Charlottetown, PE C1A 4K9",
