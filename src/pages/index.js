@@ -13,10 +13,10 @@ export default ({ data }) => {
   const upcomingEvent = {
     title: "P.E.I Dribbble Meetup",
     description:
-      "The first official P.E.I Designers Dribbble Meetup. Come out and socialize with designers, developers, and individuals in the community interested in creating a more inclusive and human-centered design community. We'll provide food, beverages, and great swag. You just provide great conversation! Meetup brought to you by Dribbble.",
-    location: "To be announced",
-    startTime: "2018-07-31T19:00:00-04:00",
-    endTime: "2018-07-31T21:00:00-04:00",
+      "",
+    location: "Atlantic Technology Centre, 176 Great George St, 4th floor, Charlottetown, PE C1A 4K9",
+    startTime: "2018-09-25T19:00:00-04:00",
+    endTime: "2018-09-25T21:00:00-04:00",
     url: "https://www.meetup.com/peidesign/events/"
   };
   
