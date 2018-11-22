@@ -11,13 +11,13 @@ import Shapes from "../components/shapes";
 export default ({ data }) => {
   const siteMetadata = data.site.siteMetadata
   const upcomingEvent = {
-    title: "How Websites Learn - P.E.I Design",
+    title: "A Practical Guide to Usability Testing",
     description:
-      "",
+      "You'll learn what usability testing is, why it's valuable, and where it fits in the design process. You'll also gain a basic understanding of how to prepare for and conduct usability testing, and leave with resources you can start using right away.",
     location: "Atlantic Technology Centre, 176 Great George St, 4th floor, Charlottetown, PE C1A 4K9",
-    startTime: "2018-09-25T19:00:00-04:00",
-    endTime: "2018-09-25T21:00:00-04:00",
-    url: "https://www.meetup.com/peidesign/events/"
+    startTime: "2018-11-27T19:00:00-04:00",
+    endTime: "2018-11-27T21:00:00-04:00",
+    url: "https://www.meetup.com/peidesign/events/256607855/"
   };
   
   const startDate = moment(upcomingEvent.startTime).format("MMMM DD, YYYY")
