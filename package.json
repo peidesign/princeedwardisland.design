@@ -1,32 +1,24 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
-  "license": "MIT",
+  "name": "peidesign",
+  "private": true,
+  "version": "2.0.0",
+  "description": "The website and/or progressive web app (PWA) for Prince Edward Island Design",
+  "collection": "dist/components/collection/collection-manifest.json",
+  "types": "dist/components/types/components.d.ts",
+  "main": "dist/components/index.js",
+  "module": "dist/components/index.mjs",
+  "es2015": "dist/esm/index.mjs.js",
+  "es2017": "dist/esm/index.mjs.js",
+  "jsnext:main": "dist/esm/index.mjs.js",
   "scripts": {
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
+    "bootstrap": "npx lerna bootstrap",
+    "start": "npx lerna run start",
+    "build": "npx lerna run build",
+    "test": "npx lerna run test",
+    "test:watch": "npx lerna run test:watch"
   },
-  "dependencies": {
-    "extract-text-webpack-plugin": "^3.0.2",
-    "gatsby": "^1.9.238",
-    "gatsby-image": "^1.0.42",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-react-helmet": "^2.0.8",
-    "gatsby-plugin-react-svg": "^1.1.1",
-    "gatsby-plugin-sitemap": "^1.2.23",
-    "gatsby-plugin-typography": "^1.7.18",
-    "gatsby-source-airtable": "^0.0.6",
-    "laggard": "^2.0.1",
-    "moment": "^2.21.0",
-    "postcss-loader": "^2.1.3",
-    "purgecss": "^0.21.0",
-    "purgecss-webpack-plugin": "^0.22.0",
-    "react-add-to-calendar": "^0.1.5",
-    "react-helmet": "^5.2.0",
-    "rtlcss": "^2.2.1",
-    "stylelint": "^9.1.3",
-    "stylelint-loader": "^6.2.0",
-    "tailwindcss": "^0.5.1"
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.13.4"
   }
 }

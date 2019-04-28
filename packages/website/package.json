@@ -1,0 +1,26 @@
+{
+  "name": "@peidesign/website",
+  "private": true,
+  "version": "2.0.0",
+  "description": "The website and/or progressive web app (PWA) for Prince Edward Island Design",
+  "collection": "dist/components/collection/collection-manifest.json",
+  "types": "dist/components/types/components.d.ts",
+  "main": "dist/components/index.js",
+  "module": "dist/components/index.mjs",
+  "es2015": "dist/esm/index.mjs.js",
+  "es2017": "dist/esm/index.mjs.js",
+  "jsnext:main": "dist/esm/index.mjs.js",
+  "scripts": {
+    "start": "stencil build --dev --watch --serve",
+    "build": "stencil build --prerender",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "@stencil/core": "^1.0.0-alpha.14",
+    "@stencil/router": "^0.3.4-2",
+    "@stencil/state-tunnel": "0.0.9-5",
+    "@stencil/postcss": "^0.1.0"
+  },
+  "license": "MIT"
+}
