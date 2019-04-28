@@ -13,38 +13,30 @@ import {
 
 
 export namespace Components {
-  interface AppHome {}
-  interface AppProfile {
-    'match': MatchResults;
-  }
-  interface AppRoot {}
-  interface PageNotFound {
+  interface PeidApp {}
+  interface PeidHomepage {}
+  interface PeidPageNotFound {
     'match': MatchResults;
   }
 }
 
 declare namespace LocalJSX {
-  interface AppHome extends JSXBase.HTMLAttributes {}
-  interface AppProfile extends JSXBase.HTMLAttributes {
-    'match'?: MatchResults;
-  }
-  interface AppRoot extends JSXBase.HTMLAttributes {}
-  interface PageNotFound extends JSXBase.HTMLAttributes {
+  interface PeidApp extends JSXBase.HTMLAttributes {}
+  interface PeidHomepage extends JSXBase.HTMLAttributes {}
+  interface PeidPageNotFound extends JSXBase.HTMLAttributes {
     'match'?: MatchResults;
   }
 
   interface ElementInterfaces {
-    'AppHome': Components.AppHome;
-    'AppProfile': Components.AppProfile;
-    'AppRoot': Components.AppRoot;
-    'PageNotFound': Components.PageNotFound;
+    'PeidApp': Components.PeidApp;
+    'PeidHomepage': Components.PeidHomepage;
+    'PeidPageNotFound': Components.PeidPageNotFound;
   }
 
   interface IntrinsicElements {
-    'AppHome': LocalJSX.AppHome;
-    'AppProfile': LocalJSX.AppProfile;
-    'AppRoot': LocalJSX.AppRoot;
-    'PageNotFound': LocalJSX.PageNotFound;
+    'PeidApp': LocalJSX.PeidApp;
+    'PeidHomepage': LocalJSX.PeidHomepage;
+    'PeidPageNotFound': LocalJSX.PeidPageNotFound;
   }
 }
 export { LocalJSX as JSX };
@@ -59,41 +51,33 @@ declare module "@stencil/core" {
 declare global {
 
 
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  interface HTMLPeidAppElement extends Components.PeidApp, HTMLStencilElement {}
+  var HTMLPeidAppElement: {
+    prototype: HTMLPeidAppElement;
+    new (): HTMLPeidAppElement;
   };
 
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  interface HTMLPeidHomepageElement extends Components.PeidHomepage, HTMLStencilElement {}
+  var HTMLPeidHomepageElement: {
+    prototype: HTMLPeidHomepageElement;
+    new (): HTMLPeidHomepageElement;
   };
 
-  interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
-  var HTMLAppRootElement: {
-    prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
-  };
-
-  interface HTMLPageNotFoundElement extends Components.PageNotFound, HTMLStencilElement {}
-  var HTMLPageNotFoundElement: {
-    prototype: HTMLPageNotFoundElement;
-    new (): HTMLPageNotFoundElement;
+  interface HTMLPeidPageNotFoundElement extends Components.PeidPageNotFound, HTMLStencilElement {}
+  var HTMLPeidPageNotFoundElement: {
+    prototype: HTMLPeidPageNotFoundElement;
+    new (): HTMLPeidPageNotFoundElement;
   };
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement
-    'app-profile': HTMLAppProfileElement
-    'app-root': HTMLAppRootElement
-    'page-not-found': HTMLPageNotFoundElement
+    'peid-app': HTMLPeidAppElement
+    'peid-homepage': HTMLPeidHomepageElement
+    'peid-page-not-found': HTMLPeidPageNotFoundElement
   }
 
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
-    'app-profile': HTMLAppProfileElement;
-    'app-root': HTMLAppRootElement;
-    'page-not-found': HTMLPageNotFoundElement;
+    'peid-app': HTMLPeidAppElement;
+    'peid-homepage': HTMLPeidHomepageElement;
+    'peid-page-not-found': HTMLPeidPageNotFoundElement;
   }
 }
 

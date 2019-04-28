@@ -16,10 +16,10 @@
 ### Graph
 ```mermaid
 graph TD;
-  app-root --> stencil-router
-  app-root --> stencil-route-switch
-  app-root --> stencil-route
-  style app-root fill:#f9f,stroke:#333,stroke-width:4px
+  peid-app --> stencil-router
+  peid-app --> stencil-route-switch
+  peid-app --> stencil-route
+  style peid-app fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
