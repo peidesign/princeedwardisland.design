@@ -3,9 +3,14 @@ module.exports = def => {
   const props = def.get("props");
 
   props.forEach(prop => {
+    const namespace = prop.get("namespace");
     const category = prop.get("category");
     const name = prop.get("name");
-    const value = `var(--${name})`;
+    let value = `var(--${category}-${name})`;
+
+    if (namespace && namespace !== "namespace") {
+      value = `var(--${namespace}-${category}-${name})`;
+    }
 
     if (!content.hasOwnProperty(category)) {
       content[category] = {};

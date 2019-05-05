@@ -34,7 +34,8 @@ async function generateOutput(config, transform, format) {
 
     const output = await theo.convert({
       transform: transform,
-      format: format
+      format: format,
+      resolveMetaAliases: true
     });
     const outputFile = config
       .replace(oldExt, newExt)

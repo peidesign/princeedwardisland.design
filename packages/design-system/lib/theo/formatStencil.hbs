@@ -3,13 +3,13 @@
  *
  {{#each props as |prop|}}
  {{#if prop.comment}}
- * @prop --{{prop.name}}: {{trim prop.comment}}
+ * @prop --{{#if prop.namespace}}{{kebabcase prop.namespace}}-{{/if}}{{kebabcase prop.category}}-{{kebabcase prop.name}}: {{trim prop.comment}}
  {{/if}}
  {{/each}}
  **/
 :root {
     {{#each props as |prop|}}
-    --{{kebabcase prop.name}}: {{#eq prop.type "string"}}"{{/eq}}{{{prop.value}}}{{#eq
+    --{{#if prop.namespace}}{{kebabcase prop.namespace}}-{{/if}}{{kebabcase prop.category}}-{{kebabcase prop.name}}: {{#eq prop.type "string"}}"{{/eq}}{{{prop.value}}}{{#eq
 prop.type "string"}}"{{/eq}};
     {{/each}}
 }

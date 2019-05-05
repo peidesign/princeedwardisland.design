@@ -86,6 +86,7 @@ module.exports = {
   props: [].concat.apply([], colors.map(color => generateScale(color))),
   global: {
     category: "colors",
-    type: "color"
+    type: "color",
+    namespace: "peid"
   }
 };
