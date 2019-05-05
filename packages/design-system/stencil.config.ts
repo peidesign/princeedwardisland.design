@@ -38,5 +38,9 @@ export const config: Config = {
       dir: "dist/prerender"
     }
   ],
-  plugins: [postcss(tailwindcss)]
+  plugins: [
+    postcss({
+      plugins: [tailwindcss]
+    })
+  ]
 };

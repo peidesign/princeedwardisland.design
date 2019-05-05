@@ -66,7 +66,7 @@ function getAccessibilityForColor(color) {
   results.contrastWhite = chroma.contrast(color, "#FFFFFF");
   results.contrastBlack = chroma.contrast(color, "#000000");
   results.temperature = chroma.temperature(color);
-  results.luminance = chroma.luminance(color);
+  // TODO: luminance
 
   return results;
 }
@@ -85,7 +85,7 @@ function getAccessbilityForColors(colors) {
 module.exports = {
   props: [].concat.apply([], colors.map(color => generateScale(color))),
   global: {
-    category: "color",
+    category: "colors",
     type: "color"
   }
 };
