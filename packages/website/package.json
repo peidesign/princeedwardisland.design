@@ -11,16 +11,18 @@
   "es2017": "dist/esm/index.mjs.js",
   "jsnext:main": "dist/esm/index.mjs.js",
   "scripts": {
-    "start": "stencil build --dev --watch --serve",
-    "build": "stencil build --prerender",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "start": "npx netlify dev",
+    "develop": "npx stencil build --dev --watch --serve --port=3333",
+    "build": "npx stencil build --prerender",
+    "test": "npx stencil test --spec --e2e",
+    "test.watch": "npx stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "^1.0.0-alpha.14",
+    "@peidesign/design-system": "^0.1.0",
+    "@stencil/core": "^1.0.0-alpha.15",
+    "@stencil/postcss": "^0.1.0",
     "@stencil/router": "^0.3.4-2",
-    "@stencil/state-tunnel": "0.0.9-5",
-    "@stencil/postcss": "^0.1.0"
+    "@stencil/state-tunnel": "0.0.9-5"
   },
   "license": "MIT"
 }

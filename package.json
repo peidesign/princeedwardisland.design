@@ -12,7 +12,7 @@
   "jsnext:main": "dist/esm/index.mjs.js",
   "scripts": {
     "bootstrap": "npx lerna bootstrap",
-    "start": "npx lerna run start",
+    "start": "npx lerna run start --parallel",
     "build": "npx lerna run build",
     "test": "npx lerna run test",
     "test:watch": "npx lerna run test:watch"

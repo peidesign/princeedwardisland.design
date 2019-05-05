@@ -8,9 +8,34 @@
   Any global CSS variables should also be applied here.
 */
 
+@import "./tokens/color/color.vars.css";
 
-body {
-  margin: 0px;
-  padding: 0px;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-}
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ */
+@tailwind preflight;
+
+/**
+  * This injects any tailwindcss component classes registered by plugins.
+  */
+@tailwind components;
+
+/**
+  * This injects all of Tailwind's utility classes, generated based on your
+  * config file. It also injects any utility classes registered by plugins.
+  */
+@tailwind utilities;
+
+/**
+ * This injects our custom utility classes after the tailwind utilties
+ */
+@import "./utilities/index.css";
+
+/**
+  * This injects the media query variants of our utilities
+  */
+@tailwind screens;

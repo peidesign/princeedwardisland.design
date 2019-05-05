@@ -10,18 +10,18 @@ import { JSX } from '@stencil/core';
 
 
 export namespace Components {
-  interface AppRoot {}
+  interface PeidDesignSystem {}
 }
 
 declare namespace LocalJSX {
-  interface AppRoot extends JSXBase.HTMLAttributes {}
+  interface PeidDesignSystem extends JSXBase.HTMLAttributes {}
 
   interface ElementInterfaces {
-    'AppRoot': Components.AppRoot;
+    'PeidDesignSystem': Components.PeidDesignSystem;
   }
 
   interface IntrinsicElements {
-    'AppRoot': LocalJSX.AppRoot;
+    'PeidDesignSystem': LocalJSX.PeidDesignSystem;
   }
 }
 export { LocalJSX as JSX };
@@ -36,17 +36,17 @@ declare module "@stencil/core" {
 declare global {
 
 
-  interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
-  var HTMLAppRootElement: {
-    prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
+  interface HTMLPeidDesignSystemElement extends Components.PeidDesignSystem, HTMLStencilElement {}
+  var HTMLPeidDesignSystemElement: {
+    prototype: HTMLPeidDesignSystemElement;
+    new (): HTMLPeidDesignSystemElement;
   };
   interface HTMLElementTagNameMap {
-    'app-root': HTMLAppRootElement
+    'peid-design-system': HTMLPeidDesignSystemElement
   }
 
   interface ElementTagNameMap {
-    'app-root': HTMLAppRootElement;
+    'peid-design-system': HTMLPeidDesignSystemElement;
   }
 }
 

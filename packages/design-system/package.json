@@ -10,16 +10,30 @@
   "es2017": "dist/esm/index.mjs.js",
   "jsnext:main": "dist/esm/index.mjs.js",
   "scripts": {
-    "start": "stencil build --dev --watch --serve",
-    "build": "stencil build --prerender",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "start": "npx netlify dev",
+    "develop": "",
+    "develop:stencil": "npx stencil build --prerender --dev --watch --serve --port=3334",
+    "develop: tokens": "node ./scripts/tokens.js",
+    "build": "",
+    "build:stencil": "npx stencil build --prerender",
+    "build:tokens": "node ./scripts/tokens.js",
+    "test": "npx stencil test --spec --e2e",
+    "test.watch": "npx stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "^1.0.0-alpha.14",
+    "@stencil/core": "^1.0.0-alpha.15",
+    "@stencil/postcss": "^0.1.0",
     "@stencil/router": "^0.3.4-2",
-    "@stencil/state-tunnel": "0.0.9-5",
-    "@stencil/postcss": "^0.1.0"
+    "@stencil/state-tunnel": "0.0.9-5"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/theo": "^8.1.3",
+    "chroma-js": "^2.0.3",
+    "color": "^3.1.1",
+    "colorable": "^1.0.5",
+    "fast-glob": "^2.2.6",
+    "tailwindcss": "^1.0.0-beta.8",
+    "theo": "^8.1.2"
+  }
 }

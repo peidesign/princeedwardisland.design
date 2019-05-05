@@ -1,0 +1,7 @@
+props:
+  - name: myprop
+    value: red
+    type: color
+    comment: Do the thing
+global:
+  category: color
