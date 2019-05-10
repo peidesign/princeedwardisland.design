@@ -2,7 +2,7 @@ import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "peid-card",
-  styleUrl: "card.css",
+  styleUrls: ["card.css", "../../../global/app.css"],
   shadow: true
 })
 export class Card {

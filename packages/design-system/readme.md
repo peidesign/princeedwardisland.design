@@ -16,11 +16,10 @@ A modular, performant design system for [P.E.I Design][peidesign] built using [S
 
 P.E.I Design's design system can be used without any installation, anywhere HTML works, by using the source from unpkg by dropping the following into your HTML:
 
-<!-- TODO: proper unpkg links -->
-
 ```
-<script type="module" src="">
-<script nomodule src="">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@peidesign/design-system/dist/css/peid-design-system.min.css">
+<script type="module" src="https://unpkg.com/@peidesign/design-system/dist/components/index.mjs"></script>
+<script nomodule src="https://unpkg.com/@peidesign/design-system/dist/components/index.js"></script>
 ```
 
 ## Customization
@@ -34,33 +33,27 @@ It allows for:
 
 ### Design tokens
 
-Design tokens are customized by overriding them in the `:root` selector of your application's primary stylesheet:
+Design token variables are customized by overriding them in the `:root` selector of your application's primary stylesheet:
 
 ```
 :root {
   --peid-color-red-0: red;
-  --peid-color-red-1: maroon;
-
-  --peid-width-0: 0;
-  --peid-width-1: 8px;
 }
 ```
 
-All design tokens can be found at [`./src/global/tokens/`][./src/global/tokens/].
+All design tokens variables can be found at [`./src/global/tokens/`][./src/global/tokens/].
 
 ### Components
 
-Components can be customized by targetting the component selector and overriding them in your application's stylesheets. E.g, for the `peid-card` component:
+Components can be customized by targetting the component selector and overriding the default variables in your application's stylesheets. E.g, for the `peid-card` component:
 
 ```
 peid-card {
     --background: red;
-    --border-width: 1px;
-    --border-color: maroon;
 }
 ```
 
-All component tokens can be found with the components, which are found at [./src/components/].
+All component variables can be found with the components, which are found at [./src/components/].
 
 ## Installation
 

@@ -9,14 +9,14 @@ export class Hero {
   /**
    * The current title of the page
    */
-  @Prop() title: string;
+  @Prop() heading: string;
 
   render() {
     return (
-      <div class="hero">
+      <div class="hero peid-bg-color-purple-9">
         <peid-logo />
         <slot name="start" />
-        <h1>{this.title}</h1>
+        <h1>{this.heading}</h1>
         <slot name="end" />
       </div>
     );

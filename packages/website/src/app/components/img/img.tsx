@@ -1,4 +1,4 @@
-import { Component, Element, h, Prop, Watch } from "@stencil/core";
+import { Build, Component, Element, h, Prop, Watch } from "@stencil/core";
 
 @Component({
   tag: "peid-img",
@@ -55,7 +55,9 @@ export class Img {
   }
 
   componentDidLoad() {
-    this.addIntersectionObserver();
+    if (Build.isBrowser) {
+      this.addIntersectionObserver();
+    }
   }
 
   getRemainingAttributes() {

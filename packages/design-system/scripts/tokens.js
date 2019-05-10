@@ -9,7 +9,7 @@ const theoFormatterStencil = fs.readFileSync(
   "utf8"
 );
 const tokenConfigs = glob.sync(
-  path.resolve(__dirname, "../src/global/tokens/**/*.tokens.{yml,json,js}")
+  path.resolve(__dirname, "../src/tokens/**/*.tokens.{yml,json,js}")
 );
 const componentConfigs = glob.sync(
   path.resolve(__dirname, "../src/app/**/*.tokens.{yml,json,js}")

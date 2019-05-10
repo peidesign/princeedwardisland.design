@@ -8,8 +8,13 @@
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import { JSX } from '@stencil/core';
 import {
+  LocationSegments,
   MatchResults,
+  RouterHistory,
 } from '@stencil/router';
+import {
+  Post,
+} from './app/services/blog/blog.service';
 
 
 export namespace Components {
@@ -18,9 +23,8 @@ export namespace Components {
     /**
     * The current title of the page
     */
-    'title': string;
+    'heading': string;
   }
-  interface PeidHomepage {}
   interface PeidImg {
     /**
     * The alt text to display if the image does not load
@@ -48,10 +52,24 @@ export namespace Components {
     'width': number;
   }
   interface PeidLogo {}
+  interface PeidPageHome {}
   interface PeidPageNotFound {
     'match': MatchResults;
   }
+  interface PeidPagePost {
+    'posts': Map<string, Post>;
+    'url': string;
+  }
+  interface PeidServiceBlog {
+    'getData': (url: string) => Promise<any>;
+    'history': RouterHistory;
+    'location': LocationSegments;
+  }
   interface PeidWebsite {}
+  interface PeidWebsiteRouter {
+    'postIndex': string[];
+    'posts': Map<string, Post>;
+  }
 }
 
 declare namespace LocalJSX {
@@ -60,9 +78,8 @@ declare namespace LocalJSX {
     /**
     * The current title of the page
     */
-    'title'?: string;
+    'heading'?: string;
   }
-  interface PeidHomepage extends JSXBase.HTMLAttributes {}
   interface PeidImg extends JSXBase.HTMLAttributes {
     /**
     * The alt text to display if the image does not load
@@ -90,29 +107,48 @@ declare namespace LocalJSX {
     'width'?: number;
   }
   interface PeidLogo extends JSXBase.HTMLAttributes {}
+  interface PeidPageHome extends JSXBase.HTMLAttributes {}
   interface PeidPageNotFound extends JSXBase.HTMLAttributes {
     'match'?: MatchResults;
   }
+  interface PeidPagePost extends JSXBase.HTMLAttributes {
+    'posts'?: Map<string, Post>;
+    'url'?: string;
+  }
+  interface PeidServiceBlog extends JSXBase.HTMLAttributes {
+    'history'?: RouterHistory;
+    'location'?: LocationSegments;
+  }
   interface PeidWebsite extends JSXBase.HTMLAttributes {}
+  interface PeidWebsiteRouter extends JSXBase.HTMLAttributes {
+    'postIndex'?: string[];
+    'posts'?: Map<string, Post>;
+  }
 
   interface ElementInterfaces {
     'PeidCard': Components.PeidCard;
     'PeidHero': Components.PeidHero;
-    'PeidHomepage': Components.PeidHomepage;
     'PeidImg': Components.PeidImg;
     'PeidLogo': Components.PeidLogo;
+    'PeidPageHome': Components.PeidPageHome;
     'PeidPageNotFound': Components.PeidPageNotFound;
+    'PeidPagePost': Components.PeidPagePost;
+    'PeidServiceBlog': Components.PeidServiceBlog;
     'PeidWebsite': Components.PeidWebsite;
+    'PeidWebsiteRouter': Components.PeidWebsiteRouter;
   }
 
   interface IntrinsicElements {
     'PeidCard': LocalJSX.PeidCard;
     'PeidHero': LocalJSX.PeidHero;
-    'PeidHomepage': LocalJSX.PeidHomepage;
     'PeidImg': LocalJSX.PeidImg;
     'PeidLogo': LocalJSX.PeidLogo;
+    'PeidPageHome': LocalJSX.PeidPageHome;
     'PeidPageNotFound': LocalJSX.PeidPageNotFound;
+    'PeidPagePost': LocalJSX.PeidPagePost;
+    'PeidServiceBlog': LocalJSX.PeidServiceBlog;
     'PeidWebsite': LocalJSX.PeidWebsite;
+    'PeidWebsiteRouter': LocalJSX.PeidWebsiteRouter;
   }
 }
 export { LocalJSX as JSX };
@@ -139,12 +175,6 @@ declare global {
     new (): HTMLPeidHeroElement;
   };
 
-  interface HTMLPeidHomepageElement extends Components.PeidHomepage, HTMLStencilElement {}
-  var HTMLPeidHomepageElement: {
-    prototype: HTMLPeidHomepageElement;
-    new (): HTMLPeidHomepageElement;
-  };
-
   interface HTMLPeidImgElement extends Components.PeidImg, HTMLStencilElement {}
   var HTMLPeidImgElement: {
     prototype: HTMLPeidImgElement;
@@ -157,10 +187,28 @@ declare global {
     new (): HTMLPeidLogoElement;
   };
 
+  interface HTMLPeidPageHomeElement extends Components.PeidPageHome, HTMLStencilElement {}
+  var HTMLPeidPageHomeElement: {
+    prototype: HTMLPeidPageHomeElement;
+    new (): HTMLPeidPageHomeElement;
+  };
+
   interface HTMLPeidPageNotFoundElement extends Components.PeidPageNotFound, HTMLStencilElement {}
   var HTMLPeidPageNotFoundElement: {
     prototype: HTMLPeidPageNotFoundElement;
     new (): HTMLPeidPageNotFoundElement;
+  };
+
+  interface HTMLPeidPagePostElement extends Components.PeidPagePost, HTMLStencilElement {}
+  var HTMLPeidPagePostElement: {
+    prototype: HTMLPeidPagePostElement;
+    new (): HTMLPeidPagePostElement;
+  };
+
+  interface HTMLPeidServiceBlogElement extends Components.PeidServiceBlog, HTMLStencilElement {}
+  var HTMLPeidServiceBlogElement: {
+    prototype: HTMLPeidServiceBlogElement;
+    new (): HTMLPeidServiceBlogElement;
   };
 
   interface HTMLPeidWebsiteElement extends Components.PeidWebsite, HTMLStencilElement {}
@@ -168,24 +216,36 @@ declare global {
     prototype: HTMLPeidWebsiteElement;
     new (): HTMLPeidWebsiteElement;
   };
+
+  interface HTMLPeidWebsiteRouterElement extends Components.PeidWebsiteRouter, HTMLStencilElement {}
+  var HTMLPeidWebsiteRouterElement: {
+    prototype: HTMLPeidWebsiteRouterElement;
+    new (): HTMLPeidWebsiteRouterElement;
+  };
   interface HTMLElementTagNameMap {
     'peid-card': HTMLPeidCardElement
     'peid-hero': HTMLPeidHeroElement
-    'peid-homepage': HTMLPeidHomepageElement
     'peid-img': HTMLPeidImgElement
     'peid-logo': HTMLPeidLogoElement
+    'peid-page-home': HTMLPeidPageHomeElement
     'peid-page-not-found': HTMLPeidPageNotFoundElement
+    'peid-page-post': HTMLPeidPagePostElement
+    'peid-service-blog': HTMLPeidServiceBlogElement
     'peid-website': HTMLPeidWebsiteElement
+    'peid-website-router': HTMLPeidWebsiteRouterElement
   }
 
   interface ElementTagNameMap {
     'peid-card': HTMLPeidCardElement;
     'peid-hero': HTMLPeidHeroElement;
-    'peid-homepage': HTMLPeidHomepageElement;
     'peid-img': HTMLPeidImgElement;
     'peid-logo': HTMLPeidLogoElement;
+    'peid-page-home': HTMLPeidPageHomeElement;
     'peid-page-not-found': HTMLPeidPageNotFoundElement;
+    'peid-page-post': HTMLPeidPagePostElement;
+    'peid-service-blog': HTMLPeidServiceBlogElement;
     'peid-website': HTMLPeidWebsiteElement;
+    'peid-website-router': HTMLPeidWebsiteRouterElement;
   }
 }
 

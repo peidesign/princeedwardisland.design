@@ -17,12 +17,11 @@ export class PageNotFound {
   }
 
   render() {
-    if (this.match && this.match.params.name) {
-      return (
-        <div class="page-not-found">
-          <p>Page not found</p>
-        </div>
-      );
-    }
+    return (
+      <div class="page-not-found">
+        <p>Page not found</p>
+        <p>{this.match.params.name}</p>
+      </div>
+    );
   }
 }

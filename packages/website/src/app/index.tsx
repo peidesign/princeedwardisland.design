@@ -1,6 +1,5 @@
-import { Component, h } from "@stencil/core";
 import "@stencil/router";
-//import "@peidesign/design-system";
+import { Component, h, Prop } from "@stencil/core";
 
 @Component({
   tag: "peid-website",
@@ -10,12 +9,9 @@ import "@stencil/router";
 export class Website {
   render() {
     return (
-      <stencil-router id="router-main">
-        <stencil-route-switch scrollTopOffset={0}>
-          <stencil-route url="/" component="peid-homepage" exact={true} />
-          <stencil-route component="peid-page-not-found" />
-        </stencil-route-switch>
-      </stencil-router>
+      <peid-service-blog>
+        <peid-website-router />
+      </peid-service-blog>
     );
   }
 }

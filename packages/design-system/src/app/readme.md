@@ -1,4 +1,4 @@
-# app-root
+# peid-design-system
 
 
 

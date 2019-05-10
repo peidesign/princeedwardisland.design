@@ -9,17 +9,17 @@
 
 ### Depends on
 
-- [peid-img](../../components/img)
+- [peid-hero](../../components/hero)
 - [peid-card](../../components/card)
-- stencil-route-link
 
 ### Graph
 ```mermaid
 graph TD;
-  peid-homepage --> peid-img
-  peid-homepage --> peid-card
-  peid-homepage --> stencil-route-link
-  style peid-homepage fill:#f9f,stroke:#333,stroke-width:4px
+  peid-page-home --> peid-hero
+  peid-page-home --> peid-card
+  peid-hero --> peid-logo
+  peid-logo --> peid-img
+  style peid-page-home fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

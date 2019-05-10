@@ -32,12 +32,12 @@
 
 ### Used by
 
- - [peid-homepage](../../pages/homepage)
+ - [peid-page-home](../../pages/homepage)
 
 ### Graph
 ```mermaid
 graph TD;
-  peid-homepage --> peid-card
+  peid-page-home --> peid-card
   style peid-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

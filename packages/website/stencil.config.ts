@@ -1,5 +1,6 @@
 import { Config } from "@stencil/core";
-import { postcss } from "@stencil/postcss";
+import { postcss } from "stencil-plugin-postcss-extra";
+import postcssConfig from "./postcss.config";
 
 // TODO: generate component bundle
 export const config: Config = {
@@ -10,13 +11,23 @@ export const config: Config = {
   },
   outputTargets: [
     {
+      // Generates the pre-render script
+      type: "dist-hydrate-script",
+      dir: "dist/hydrate"
+    },
+    {
       // Generates the app
       type: "www",
       dir: "dist/www",
+      baseUrl: "https://princeedwardisland.design/",
       serviceWorker: null,
       copy: [
         {
           src: "_redirects"
+        },
+        {
+          src: "../dist/content",
+          dest: "content"
         }
       ]
     },
@@ -27,13 +38,8 @@ export const config: Config = {
     },
     {
       // Generates the markdown documentation for the repository
-      type: "docs"
-    },
-    {
-      // Generates the pre-render script
-      type: "dist-hydrate-script",
-      dir: "dist/prerender"
+      type: "docs-readme"
     }
   ],
-  plugins: [postcss()]
+  plugins: [postcss(postcssConfig)]
 };

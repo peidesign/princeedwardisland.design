@@ -1,34 +1,17 @@
 import { Component, h } from "@stencil/core";
 
 @Component({
-  tag: "peid-homepage",
-  styleUrl: "homepage.css",
+  tag: "peid-page-home",
+  styleUrls: ["homepage.css", "../../../global/app.css"],
   shadow: true
 })
 export class Homepage {
-  private names = ["Stencil", "Chris", "Kaela"];
-
   render() {
-    return (
-      <div class="app-home">
-        <p>
-          Welcome to the Stencil App Starter. You can use this starter to build
-          entire apps all with web components using Stencil! Check out our docs
-          on <a href="https://stenciljs.com">stenciljs.com</a> to get started.
-        </p>
-
-        <peid-hero title="Prince Edward Island Design" />
-
-        <peid-card>
-          <p>Hello world, I'm a slot!</p>
-        </peid-card>
-
-        {this.names.map(name => (
-          <stencil-route-link url={`/profile/${name}`}>
-            <button>{name}'s Profile</button>
-          </stencil-route-link>
-        ))}
-      </div>
-    );
+    return [
+      <peid-hero heading="Prince Edward Island Design" />,
+      <peid-card>
+        <p class="peid-text-purple-9">Hello world, I'm a slot!</p>
+      </peid-card>
+    ];
   }
 }

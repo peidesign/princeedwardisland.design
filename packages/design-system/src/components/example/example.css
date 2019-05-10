@@ -1,0 +1,5 @@
+@import "./example.tokens.css";
+
+:host {
+    --background: var(--peid-color-purple-1);
+}

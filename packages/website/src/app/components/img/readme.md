@@ -21,12 +21,12 @@
 
 ### Used by
 
- - [peid-homepage](../../pages/homepage)
+ - [peid-logo](../logo)
 
 ### Graph
 ```mermaid
 graph TD;
-  peid-homepage --> peid-img
+  peid-logo --> peid-img
   style peid-img fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
