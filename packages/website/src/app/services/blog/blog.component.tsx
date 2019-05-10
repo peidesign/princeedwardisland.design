@@ -1,19 +1,10 @@
-import {
-  Build,
-  Component,
-  Element,
-  h,
-  Method,
-  Prop,
-  State,
-  Watch
-} from "@stencil/core";
+import { Build, Component, h, Method, Prop, State, Watch } from "@stencil/core";
 import {
   RouterHistory,
   LocationSegments,
   injectHistory
 } from "@stencil/router";
-import { default as BlogService, BlogState, Post } from "./blog.service";
+import BlogService, { BlogState, Post } from "./blog.service";
 
 @Component({
   tag: "peid-service-blog",
@@ -22,8 +13,6 @@ import { default as BlogService, BlogState, Post } from "./blog.service";
 export class BlogServiceComponent {
   private postIndex: string[] = [];
   private posts: Map<string, Post> = new Map();
-
-  @Element() el: HTMLElement;
 
   @Prop() history: RouterHistory;
   @Prop() location: LocationSegments;
@@ -35,7 +24,9 @@ export class BlogServiceComponent {
     newValue: LocationSegments,
     oldValue: LocationSegments
   ) {
-    if (oldValue || Build.isDev) {
+    // We don't try and fetch a post on first load, unless in dev,
+    // because we will always pre-render
+    if (oldValue || Build.isDev || !Build.isBrowser) {
       const cleanPathName = newValue.pathname.endsWith("/")
         ? newValue.pathname.slice(0, newValue.pathname.length - 1)
         : newValue.pathname;
