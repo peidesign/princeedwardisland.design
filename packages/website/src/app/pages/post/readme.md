@@ -7,12 +7,10 @@
 
 ## Properties
 
-| Property      | Attribute     | Description | Type  | Default     |
-| ------------- | ------------- | ----------- | ----- | ----------- |
-| `body`        | `body`        |             | `any` | `undefined` |
-| `description` | `description` |             | `any` | `undefined` |
-| `pageTitle`   | `page-title`  |             | `any` | `undefined` |
-| `slug`        | `slug`        |             | `any` | `undefined` |
+| Property | Attribute | Description | Type                | Default     |
+| -------- | --------- | ----------- | ------------------- | ----------- |
+| `posts`  | --        |             | `Map<string, Post>` | `undefined` |
+| `url`    | `url`     |             | `string`            | `undefined` |
 
 
 ----------------------------------------------

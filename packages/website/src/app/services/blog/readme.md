@@ -5,15 +5,23 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property   | Attribute | Description | Type               | Default     |
+| ---------- | --------- | ----------- | ------------------ | ----------- |
+| `history`  | --        |             | `RouterHistory`    | `undefined` |
+| `location` | --        |             | `LocationSegments` | `undefined` |
+
+
 ## Methods
 
-### `getData() => Promise<({ slug: string; pageTitle: string; description: string; body?: undefined; } | { slug: string; pageTitle: string; body: string; description?: undefined; })[]>`
+### `getData(url: string) => Promise<any>`
 
 
 
 #### Returns
 
-Type: `Promise<({ slug: string; pageTitle: string; description: string; body?: undefined; } | { slug: string; pageTitle: string; body: string; description?: undefined; })[]>`
+Type: `Promise<any>`
 
 
 
@@ -24,14 +32,9 @@ Type: `Promise<({ slug: string; pageTitle: string; description: string; body?: u
 
  - [peid-website](../..)
 
-### Depends on
-
-- [peid-service-markdown](../markdown)
-
 ### Graph
 ```mermaid
 graph TD;
-  peid-service-blog --> peid-service-markdown
   peid-website --> peid-service-blog
   style peid-service-blog fill:#f9f,stroke:#333,stroke-width:4px
 ```
