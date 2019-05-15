@@ -11,13 +11,12 @@ import Shapes from "../components/shapes";
 export default ({ data }) => {
   const siteMetadata = data.site.siteMetadata
   const upcomingEvent = {
-    title: "A Practical Guide to Usability Testing",
+    title: "P.E.I Design 2019 - Q2: Design Thinking & Narrative Design",
     description:
-      "You'll learn what usability testing is, why it's valuable, and where it fits in the design process. You'll also gain a basic understanding of how to prepare for and conduct usability testing, and leave with resources you can start using right away.",
-    location: "Atlantic Technology Centre, 176 Great George St, 4th floor, Charlottetown, PE C1A 4K9",
-    startTime: "2018-11-27T19:00:00-04:00",
-    endTime: "2018-11-27T21:00:00-04:00",
-    url: "https://www.meetup.com/peidesign/events/256607855/"
+      "This month we cover an Introduction to Design Thinking from Veteran Affairs Canada's first Service Designer Farzad Sedghipour , and a look into the world of Narrative Design from the founder of Minotaur Creative, Summerside native Brendan Henry.",
+    startTime: "2019-05-22T19:00:00-04:00",
+    endTime: "2010-15-22T21:00:00-04:00",
+    url: "https://www.meetup.com/peidesign/events/258483261/"
   };
   
   const startDate = moment(upcomingEvent.startTime).format("MMMM DD, YYYY")
