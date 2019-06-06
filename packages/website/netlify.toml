@@ -6,6 +6,6 @@
 
 [dev]
   ## TODO: remove yarn dep
-  command = "yarn develop"
+  command = "npx yarn develop"
   port = 3333
   publish = "dist/www"
