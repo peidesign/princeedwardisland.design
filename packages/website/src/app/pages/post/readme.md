@@ -7,10 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                | Default     |
-| -------- | --------- | ----------- | ------------------- | ----------- |
-| `posts`  | --        |             | `Map<string, Post>` | `undefined` |
-| `url`    | `url`     |             | `string`            | `undefined` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `url`    | `url`     |             | `string` | `undefined` |
 
 
 ----------------------------------------------

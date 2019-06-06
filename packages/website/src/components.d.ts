@@ -6,185 +6,36 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-import { JSX } from '@stencil/core';
 import {
-  LocationSegments,
   MatchResults,
-  RouterHistory,
 } from '@stencil/router';
-import {
-  Post,
-} from './app/services/blog/blog.service';
 
 
 export namespace Components {
-  interface PeidCard {}
   interface PeidHero {
     /**
     * The current title of the page
     */
     'heading': string;
   }
-  interface PeidImg {
-    /**
-    * The alt text to display if the image does not load
-    */
-    'alt': string;
-    /**
-    * The physical height of the image
-    */
-    'height': number;
-    /**
-    * The primary color of the image (hex)
-    */
-    'primaryColor': string;
-    /**
-    * The URL or path to the image
-    */
-    'src': string;
-    /**
-    * A responsive srcset for this image
-    */
-    'srcset': string;
-    /**
-    * The physical width of the image
-    */
-    'width': number;
-  }
-  interface PeidLogo {}
   interface PeidPageHome {}
   interface PeidPageNotFound {
     'match': MatchResults;
   }
   interface PeidPagePost {
-    'posts': Map<string, Post>;
     'url': string;
   }
-  interface PeidServiceBlog {
-    'getData': (url: string) => Promise<any>;
-    'history': RouterHistory;
-    'location': LocationSegments;
-  }
   interface PeidWebsite {}
-  interface PeidWebsiteRouter {
-    'postIndex': string[];
-    'posts': Map<string, Post>;
-  }
-}
-
-declare namespace LocalJSX {
-  interface PeidCard extends JSXBase.HTMLAttributes {}
-  interface PeidHero extends JSXBase.HTMLAttributes {
-    /**
-    * The current title of the page
-    */
-    'heading'?: string;
-  }
-  interface PeidImg extends JSXBase.HTMLAttributes {
-    /**
-    * The alt text to display if the image does not load
-    */
-    'alt'?: string;
-    /**
-    * The physical height of the image
-    */
-    'height'?: number;
-    /**
-    * The primary color of the image (hex)
-    */
-    'primaryColor'?: string;
-    /**
-    * The URL or path to the image
-    */
-    'src'?: string;
-    /**
-    * A responsive srcset for this image
-    */
-    'srcset'?: string;
-    /**
-    * The physical width of the image
-    */
-    'width'?: number;
-  }
-  interface PeidLogo extends JSXBase.HTMLAttributes {}
-  interface PeidPageHome extends JSXBase.HTMLAttributes {}
-  interface PeidPageNotFound extends JSXBase.HTMLAttributes {
-    'match'?: MatchResults;
-  }
-  interface PeidPagePost extends JSXBase.HTMLAttributes {
-    'posts'?: Map<string, Post>;
-    'url'?: string;
-  }
-  interface PeidServiceBlog extends JSXBase.HTMLAttributes {
-    'history'?: RouterHistory;
-    'location'?: LocationSegments;
-  }
-  interface PeidWebsite extends JSXBase.HTMLAttributes {}
-  interface PeidWebsiteRouter extends JSXBase.HTMLAttributes {
-    'postIndex'?: string[];
-    'posts'?: Map<string, Post>;
-  }
-
-  interface ElementInterfaces {
-    'PeidCard': Components.PeidCard;
-    'PeidHero': Components.PeidHero;
-    'PeidImg': Components.PeidImg;
-    'PeidLogo': Components.PeidLogo;
-    'PeidPageHome': Components.PeidPageHome;
-    'PeidPageNotFound': Components.PeidPageNotFound;
-    'PeidPagePost': Components.PeidPagePost;
-    'PeidServiceBlog': Components.PeidServiceBlog;
-    'PeidWebsite': Components.PeidWebsite;
-    'PeidWebsiteRouter': Components.PeidWebsiteRouter;
-  }
-
-  interface IntrinsicElements {
-    'PeidCard': LocalJSX.PeidCard;
-    'PeidHero': LocalJSX.PeidHero;
-    'PeidImg': LocalJSX.PeidImg;
-    'PeidLogo': LocalJSX.PeidLogo;
-    'PeidPageHome': LocalJSX.PeidPageHome;
-    'PeidPageNotFound': LocalJSX.PeidPageNotFound;
-    'PeidPagePost': LocalJSX.PeidPagePost;
-    'PeidServiceBlog': LocalJSX.PeidServiceBlog;
-    'PeidWebsite': LocalJSX.PeidWebsite;
-    'PeidWebsiteRouter': LocalJSX.PeidWebsiteRouter;
-  }
-}
-export { LocalJSX as JSX };
-
-declare module "@stencil/core" {
-  export namespace JSX {
-    interface ElementInterfaces extends LocalJSX.ElementInterfaces {}
-    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
-  }
+  interface PeidWebsiteRouter {}
 }
 
 declare global {
 
 
-  interface HTMLPeidCardElement extends Components.PeidCard, HTMLStencilElement {}
-  var HTMLPeidCardElement: {
-    prototype: HTMLPeidCardElement;
-    new (): HTMLPeidCardElement;
-  };
-
   interface HTMLPeidHeroElement extends Components.PeidHero, HTMLStencilElement {}
   var HTMLPeidHeroElement: {
     prototype: HTMLPeidHeroElement;
     new (): HTMLPeidHeroElement;
-  };
-
-  interface HTMLPeidImgElement extends Components.PeidImg, HTMLStencilElement {}
-  var HTMLPeidImgElement: {
-    prototype: HTMLPeidImgElement;
-    new (): HTMLPeidImgElement;
-  };
-
-  interface HTMLPeidLogoElement extends Components.PeidLogo, HTMLStencilElement {}
-  var HTMLPeidLogoElement: {
-    prototype: HTMLPeidLogoElement;
-    new (): HTMLPeidLogoElement;
   };
 
   interface HTMLPeidPageHomeElement extends Components.PeidPageHome, HTMLStencilElement {}
@@ -205,12 +56,6 @@ declare global {
     new (): HTMLPeidPagePostElement;
   };
 
-  interface HTMLPeidServiceBlogElement extends Components.PeidServiceBlog, HTMLStencilElement {}
-  var HTMLPeidServiceBlogElement: {
-    prototype: HTMLPeidServiceBlogElement;
-    new (): HTMLPeidServiceBlogElement;
-  };
-
   interface HTMLPeidWebsiteElement extends Components.PeidWebsite, HTMLStencilElement {}
   var HTMLPeidWebsiteElement: {
     prototype: HTMLPeidWebsiteElement;
@@ -223,29 +68,49 @@ declare global {
     new (): HTMLPeidWebsiteRouterElement;
   };
   interface HTMLElementTagNameMap {
-    'peid-card': HTMLPeidCardElement
-    'peid-hero': HTMLPeidHeroElement
-    'peid-img': HTMLPeidImgElement
-    'peid-logo': HTMLPeidLogoElement
-    'peid-page-home': HTMLPeidPageHomeElement
-    'peid-page-not-found': HTMLPeidPageNotFoundElement
-    'peid-page-post': HTMLPeidPagePostElement
-    'peid-service-blog': HTMLPeidServiceBlogElement
-    'peid-website': HTMLPeidWebsiteElement
-    'peid-website-router': HTMLPeidWebsiteRouterElement
-  }
-
-  interface ElementTagNameMap {
-    'peid-card': HTMLPeidCardElement;
     'peid-hero': HTMLPeidHeroElement;
-    'peid-img': HTMLPeidImgElement;
-    'peid-logo': HTMLPeidLogoElement;
     'peid-page-home': HTMLPeidPageHomeElement;
     'peid-page-not-found': HTMLPeidPageNotFoundElement;
     'peid-page-post': HTMLPeidPagePostElement;
-    'peid-service-blog': HTMLPeidServiceBlogElement;
     'peid-website': HTMLPeidWebsiteElement;
     'peid-website-router': HTMLPeidWebsiteRouterElement;
   }
 }
+
+declare namespace LocalJSX {
+  interface PeidHero extends JSXBase.HTMLAttributes<HTMLPeidHeroElement> {
+    /**
+    * The current title of the page
+    */
+    'heading'?: string;
+  }
+  interface PeidPageHome extends JSXBase.HTMLAttributes<HTMLPeidPageHomeElement> {}
+  interface PeidPageNotFound extends JSXBase.HTMLAttributes<HTMLPeidPageNotFoundElement> {
+    'match'?: MatchResults;
+  }
+  interface PeidPagePost extends JSXBase.HTMLAttributes<HTMLPeidPagePostElement> {
+    'url'?: string;
+  }
+  interface PeidWebsite extends JSXBase.HTMLAttributes<HTMLPeidWebsiteElement> {}
+  interface PeidWebsiteRouter extends JSXBase.HTMLAttributes<HTMLPeidWebsiteRouterElement> {}
+
+  interface IntrinsicElements {
+    'peid-hero': PeidHero;
+    'peid-page-home': PeidPageHome;
+    'peid-page-not-found': PeidPageNotFound;
+    'peid-page-post': PeidPagePost;
+    'peid-website': PeidWebsite;
+    'peid-website-router': PeidWebsiteRouter;
+  }
+}
+
+export { LocalJSX as JSX };
+
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
 

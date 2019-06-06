@@ -9,13 +9,11 @@
 
 ### Depends on
 
-- [peid-service-blog](services/blog)
 - [peid-website-router](components/router)
 
 ### Graph
 ```mermaid
 graph TD;
-  peid-website --> peid-service-blog
   peid-website --> peid-website-router
   peid-website-router --> stencil-router
   peid-website-router --> stencil-route-switch

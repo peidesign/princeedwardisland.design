@@ -5,25 +5,13 @@ import postcssConfig from "./postcss.config";
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  namespace: "peid-design-system",
+  namespace: "PeidDesignSystem",
   globalStyle: "src/global/app.css",
   globalScript: "src/global/app.ts",
   devServer: {
     openBrowser: false
   },
   outputTargets: [
-    {
-      // Generates the pre-render script
-      type: "dist-hydrate-script",
-      dir: "dist/hydrate"
-    },
-    {
-      // Generates the documentation site
-      type: "www",
-      dir: "dist/www/",
-      baseUrl: "https://design-system.princedwardisland.design",
-      serviceWorker: null
-    },
     {
       // Generates the re-usable web component bundle
       type: "dist",
@@ -32,11 +20,11 @@ export const config: Config = {
     {
       // Generates the web component JSON documentation for the style guide
       type: "docs-json",
-      file: "dist/www/docs.json"
+      file: "dist/components/docs.json"
     },
     {
       // Generates the markdown documentation for the repository
-      type: "docs"
+      type: "docs-readme"
     }
   ],
   plugins: [postcss(postcssConfig)]

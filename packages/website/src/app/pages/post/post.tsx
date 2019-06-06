@@ -1,28 +1,17 @@
 import { Component, h, Prop } from "@stencil/core";
-import BlogService, { Post } from "../../services/blog/blog.service";
 
 @Component({
   tag: "peid-page-post",
   styleUrls: ["post.css", "../../../global/app.css"],
   shadow: true
 })
-export class PostPage implements Post {
+export class PostPage {
   title;
   description;
   content;
   data;
 
   @Prop() url: string;
-  @Prop() posts: Map<string, Post>;
-
-  componentWillLoad() {
-    const post = this.posts.get(this.url);
-
-    this.title = post.title;
-    this.description = post.description;
-    this.content = post.content;
-    this.data = post;
-  }
 
   render() {
     return [
@@ -37,5 +26,3 @@ export class PostPage implements Post {
     ];
   }
 }
-
-BlogService.injectProps(PostPage, ["posts"]);

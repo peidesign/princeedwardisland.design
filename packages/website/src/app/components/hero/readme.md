@@ -20,7 +20,7 @@
 
 ### Depends on
 
-- [peid-logo](../logo)
+- peid-logo
 
 ### Graph
 ```mermaid

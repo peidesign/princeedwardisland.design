@@ -13,6 +13,7 @@
   "scripts": {
     "bootstrap": "npx lerna bootstrap",
     "start": "npx lerna run start --parallel",
+    "develop": "npx lerna run develop --parallel",
     "build": "npx lerna run build",
     "test": "npx lerna run test",
     "test:watch": "npx lerna run test:watch"

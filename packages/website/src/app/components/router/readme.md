@@ -5,14 +5,6 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property    | Attribute | Description | Type                | Default     |
-| ----------- | --------- | ----------- | ------------------- | ----------- |
-| `postIndex` | --        |             | `string[]`          | `undefined` |
-| `posts`     | --        |             | `Map<string, Post>` | `undefined` |
-
-
 ## Dependencies
 
 ### Used by

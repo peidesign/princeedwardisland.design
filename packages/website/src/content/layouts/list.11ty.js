@@ -1,13 +1,22 @@
+const item = require("./item.11ty");
+
 module.exports = data => {
   const endpoints = {};
+  const collections = data.collections;
 
-  Object.keys(data.collections).forEach(collection => {
-    if (data.collections[collection].length > 0) {
-      endpoints[collection] = data.collections[collection].map(
-        item => item.url
-      );
+  for (var collection of Object.keys(collections)) {
+    if (collections[collection].length > 0) {
+      const items = {};
+
+      collections[collection].forEach(template => {
+        const { _id, permalink } = JSON.parse(item(template.data));
+
+        items[_id] = permalink;
+      });
+
+      endpoints[collection] = items;
     }
-  });
+  }
 
   return JSON.stringify(endpoints);
 };

@@ -1,9 +1,20 @@
+const crypto = require("crypto");
+
 module.exports = data => {
-  const page = data;
+  let id;
+  let output;
+  const item = data;
 
-  delete page.pkg;
-  delete page.page;
-  delete page.collections;
+  delete item.pkg;
+  delete item.page;
+  delete item.collections;
 
-  return JSON.stringify({ ...page, ...data.page });
+  output = { ...item, ...data.page };
+  id = crypto
+    .createHash("md5")
+    .update(JSON.stringify({ ...item, ...data.page }))
+    .digest("hex");
+  output._id = id;
+
+  return JSON.stringify(output);
 };

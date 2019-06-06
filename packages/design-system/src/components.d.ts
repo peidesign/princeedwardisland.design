@@ -6,47 +6,110 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-import { JSX } from '@stencil/core';
 
 
 export namespace Components {
-  interface PeidDesignSystem {}
-}
-
-declare namespace LocalJSX {
-  interface PeidDesignSystem extends JSXBase.HTMLAttributes {}
-
-  interface ElementInterfaces {
-    'PeidDesignSystem': Components.PeidDesignSystem;
+  interface PeidCard {}
+  interface PeidImg {
+    /**
+    * The alt text to display if the image does not load
+    */
+    'alt': string;
+    /**
+    * The physical height of the image
+    */
+    'height': number;
+    /**
+    * The primary color of the image (hex)
+    */
+    'primaryColor': string;
+    /**
+    * The URL or path to the image
+    */
+    'src': string;
+    /**
+    * A responsive srcset for this image
+    */
+    'srcset': string;
+    /**
+    * The physical width of the image
+    */
+    'width': number;
   }
-
-  interface IntrinsicElements {
-    'PeidDesignSystem': LocalJSX.PeidDesignSystem;
-  }
-}
-export { LocalJSX as JSX };
-
-declare module "@stencil/core" {
-  export namespace JSX {
-    interface ElementInterfaces extends LocalJSX.ElementInterfaces {}
-    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
-  }
+  interface PeidLogo {}
 }
 
 declare global {
 
 
-  interface HTMLPeidDesignSystemElement extends Components.PeidDesignSystem, HTMLStencilElement {}
-  var HTMLPeidDesignSystemElement: {
-    prototype: HTMLPeidDesignSystemElement;
-    new (): HTMLPeidDesignSystemElement;
+  interface HTMLPeidCardElement extends Components.PeidCard, HTMLStencilElement {}
+  var HTMLPeidCardElement: {
+    prototype: HTMLPeidCardElement;
+    new (): HTMLPeidCardElement;
+  };
+
+  interface HTMLPeidImgElement extends Components.PeidImg, HTMLStencilElement {}
+  var HTMLPeidImgElement: {
+    prototype: HTMLPeidImgElement;
+    new (): HTMLPeidImgElement;
+  };
+
+  interface HTMLPeidLogoElement extends Components.PeidLogo, HTMLStencilElement {}
+  var HTMLPeidLogoElement: {
+    prototype: HTMLPeidLogoElement;
+    new (): HTMLPeidLogoElement;
   };
   interface HTMLElementTagNameMap {
-    'peid-design-system': HTMLPeidDesignSystemElement
-  }
-
-  interface ElementTagNameMap {
-    'peid-design-system': HTMLPeidDesignSystemElement;
+    'peid-card': HTMLPeidCardElement;
+    'peid-img': HTMLPeidImgElement;
+    'peid-logo': HTMLPeidLogoElement;
   }
 }
+
+declare namespace LocalJSX {
+  interface PeidCard extends JSXBase.HTMLAttributes<HTMLPeidCardElement> {}
+  interface PeidImg extends JSXBase.HTMLAttributes<HTMLPeidImgElement> {
+    /**
+    * The alt text to display if the image does not load
+    */
+    'alt'?: string;
+    /**
+    * The physical height of the image
+    */
+    'height'?: number;
+    /**
+    * The primary color of the image (hex)
+    */
+    'primaryColor'?: string;
+    /**
+    * The URL or path to the image
+    */
+    'src'?: string;
+    /**
+    * A responsive srcset for this image
+    */
+    'srcset'?: string;
+    /**
+    * The physical width of the image
+    */
+    'width'?: number;
+  }
+  interface PeidLogo extends JSXBase.HTMLAttributes<HTMLPeidLogoElement> {}
+
+  interface IntrinsicElements {
+    'peid-card': PeidCard;
+    'peid-img': PeidImg;
+    'peid-logo': PeidLogo;
+  }
+}
+
+export { LocalJSX as JSX };
+
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
 

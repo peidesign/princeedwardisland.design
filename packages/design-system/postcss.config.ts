@@ -1,3 +1,4 @@
+import { RenderCtx } from "stencil-plugin-postcss-extra";
 import atImport from "postcss-import";
 import cssNano from "cssnano";
 import path from "path";

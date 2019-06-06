@@ -10,7 +10,7 @@
 ### Depends on
 
 - [peid-hero](../../components/hero)
-- [peid-card](../../components/card)
+- peid-card
 
 ### Graph
 ```mermaid

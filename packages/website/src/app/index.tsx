@@ -1,5 +1,5 @@
 import "@stencil/router";
-import { Component, h, Prop } from "@stencil/core";
+import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "peid-website",
@@ -9,9 +9,7 @@ import { Component, h, Prop } from "@stencil/core";
 export class Website {
   render() {
     return (
-      <peid-service-blog>
         <peid-website-router />
-      </peid-service-blog>
     );
   }
 }
